@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>jQuery mtz.monthpicker Demos</title>
+
+
+</head>
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/time-clock/jQuery-Plugin-For-jQuery-UI-Month-Year-Picker-mtz-monthpicker.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1 style="margin-top:150px;">jQuery mtz.monthpicker Demos</h1>
+<h2>Basic</h2>
+<input type="text" id="demo-1" >
+<h2>With options</h2>
+<input type="text" id="demo-2" >
+<h2>All together</h2>
+<input type="text" id="demo-3" > <input type="button" value="..." id="demo-3-button"><small> ( click the button )</small>
+<script src="jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="jquery.mtz.monthpicker.js"></script>
+<script>
+$('#demo-1').monthpicker();
+$('#demo-2').monthpicker({pattern: 'yyyy-mm', 
+    selectedYear: 2015,
+    startYear: 1900,
+    finalYear: 2212,});
+	
+	var options = {
+    selectedYear: 2015,
+    startYear: 2008,
+    finalYear: 2018,
+    openOnFocus: false // Let's now use a button to show the widget
+};
+
+$('#demo-3').monthpicker(options);
+
+$('#demo-3').monthpicker().bind('monthpicker-change-year', function (e, year) {
+    $('#demo-3').monthpicker('disableMonths', []); // (re)enables all
+    if (year === '2015') {
+        $('#demo-3').monthpicker('disableMonths', [1, 2, 3, 4]);
+    }
+    if (year === '2014') {
+        $('#demo-3').monthpicker('disableMonths', [9, 10, 11, 12]);
+    }
+});
+
+$('#demo-3-button').bind('click', function () {
+    $('#demo-3').monthpicker('show');
+});
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

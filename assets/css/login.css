@@ -1,0 +1,47 @@
+.login-page, .register-page{
+  background-color: #ecf0f1;
+}
+
+.login-box, .register-box{
+  margin: 5% auto;
+}
+
+.login-box-body, .register-box-body{
+  padding: 50px 20px;
+  color: #303030;
+  box-shadow: 0 0 80px rgba(0,0,0,.05);
+}
+
+.login-background{
+	background-image: url('../img/login-bg.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.login-background:after{
+	content: '';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,.5);
+	z-index: -1;
+}
+
+.login-page-side .login-box{
+  margin: auto;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  width: 450px;
+}
+
+.login-page-side .login-box .login-box-body{
+	height: 100%;
+	padding: 150px 60px;
+}

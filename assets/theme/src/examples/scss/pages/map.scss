@@ -1,0 +1,11 @@
+@import "vars";
+
+.page-map {
+  &-full {
+    .page,
+    .gmap,
+    #world-map {
+      height: 100%;
+    }
+  }
+}
